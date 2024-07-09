@@ -1,0 +1,354 @@
+<html lang="en" data-bs-theme="dark">
+<script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+<script src="cart.js" defer></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      .card-text1{
+           color: black;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+<main>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="images/cakes.jpeg" style="height: 500px;">
+            <div class="card-body">
+              <p  style="color:black" class="card-text1"><h3 style="color:black" >Belgian chocolate ganache cake</h3>
+                <font color="black">Experience pure indulgence with a Belgian chocolate ganache cake, featuring velvety layers of rich, creamy ganache, moist chocolate sponge, and a glossy, smooth finish. Perfect for any special occasion or chocolate lover.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Belgian chocolate ganache cake', description: 'Belgian chocolate ganache cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹1600/₹2500</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/Floral cake.jpeg" style="height: 500px;">
+            <div class="card-body">
+              <p  style="color:black" class="card-text1"><h3  style="color:black"> Rosette Floral Cake </h3>
+                <font color="black">Delight in the elegance of a Rosette Floral Cake, adorned with intricate, hand-piped buttercream roses in a variety of colors. This visually stunning cake is perfect for weddings, birthdays, or any special celebration.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Rosette Floral cake', description: 'Rosette Floral Cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹3000/₹5000</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/floral decor cake.jpeg" style="height: 500px;">
+            <div class="card-body">
+              <p  style="color:black" class="card-text1"><h3 style="color:black">Floral Decor Cake</h3>  <font color="black">Enjoy the beauty of a White Floral Decor Cake adorned with vibrant, hand-piped buttercream flowers in various colors. This striking and elegant cake is perfect for weddings, birthdays, or any festive occasion.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Floral Decor Cake', description: 'Floral Decor Cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹5500</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/vintage.jpeg" style="height: 500px;">
+            <div class="card-body">
+              <p  style="color:black" class="card-text1"><h3 style="color:black">Vintage Style Lambeth Cake</h3>  <font color="black">Indulge in the charm of a Vintage Style Lambeth Cake, showcasing masterful, hand-piped royal icing with birght colours. This nostalgic masterpiece is perfect for creating unforgettable celebrations.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Vintage Style Lambeth Cake', description: 'Vintage Style Lambeth Cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹4500</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="images/gold.jpeg" style="height: 500px;">
+            <div class="card-body">
+               <p  style="color:black" class="card-text1"><h3 style="color:black">Gold Drip Chocolate Buttercake</h3>  <font color="black">Savor the decadence of a Gold Drip Chocolate Buttercake, featuring rich, moist layers of chocolate cake topped with luscious buttercream and a stunning, shimmering gold drip. Perfect for luxurious celebrations.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Gold Drip Chocolate Butter Cake', description: 'Gold Drip Chocolate Butter Cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹4500</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="images/mango.jpeg" style="height: 500px;">
+            <div class="card-body">
+               <p  style="color:black" class="card-text1"><h3 style="color:black">Mango cream cake</h3>  <font color="black">Delight in the tropical flavors of a Mango Cream Cake, featuring light, fluffy layers infused with fresh mango puree and topped with luscious mango cream. Perfect for refreshing, summer celebrations.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Mango Cream Cake', description: 'Mango Cream Cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹2400</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="images/butterfly.jpeg" style="height: 500px;">
+            <div class="card-body">
+              <p  style="color:black" class="card-text1"><h3 style="color:black">Butterfly decor vanilla buttercream cake</h3>  <font color="black">Experience a Butterfly Decor Vanilla Cream Cake, featuring moist vanilla layers and creamy frosting adorned with delicate, hand-crafted sugar butterflies. Ideal for enchanting celebrations and creating unforgettable moments.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Butterfly decor buttercream cake', description: 'Butterfly decor buttercream cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary"> ₹4500</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="images/balloon.jpeg" style="height: 500px;">
+            <div class="card-body">
+              <p  style="color:black" class="card-text1"><h3 style="color:black">Chocolate Balloon theme decor buttercream cake</h3>  <font color="black">Embrace pure chocolate bliss with our buttercream cake, beautifully adorned in a whimsical balloon theme. Perfect for celebrations, it combines rich flavors with eye-catching decor, promising a delightful experience that satisfies both chocolate enthusiasts and party guests alike.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Chocolate Balloon theme decor buttercream cake', description: 'Chocolate Balloon theme decor buttercream cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹5500</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="images/heart.jpeg" style="height: 500px;">
+            <div class="card-body">
+              <p  style="color:black" class="card-text1"><h3 style="color:black">Piniata Heart shape cake</h3>  <font color="black">Discover the joy of our heart-shaped piñata cake, a pink delight filled with surprises. Perfect for celebrations, it combines festive charm with delicious flavors that enchant both eyes and taste buds.</font></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <form id="form1" onsubmit="addTodb(event, 'form1')">
+                    <input type="hidden" name="product_name" value="Belgian chocolate ganache cake">
+                    <input type="hidden" name="product_price" value="1600">
+                    <select name="product_size" class="btn btn-sm btn-outline-secondary">
+                      <option value="Small">Small</option>
+                      <option value="Large">Large</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-outline-secondary" onclick="addToCart({name:'Piniata Heart shape cake', description: 'Piniata Heart shape cake', price: 1600, quantity: 1, image: 'images/cakes.jpeg'})">Buy now</button>
+                  </form>
+                </div>
+                <small class="text-body-secondary">₹2500</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is © Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  function addTodb(event, formId) {
+    event.preventDefault();
+    const form = document.getElementById(formId);
+    const formData = new FormData(form);
+
+    fetch('add_to_cart.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log(data);
+      alert('Item added to cart successfully!');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error adding item to cart.');
+    });
+  }
+</script>
+
+</body></html>
